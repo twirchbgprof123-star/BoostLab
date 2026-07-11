@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BoostLab — gaming услуги за Counter-Strike 2 и Fortnite." />
+  <title>BoostLab | Gaming услуги</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-grid"></div>
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <span class="brand-mark">B</span>
+      <span>BOOST<span class="accent">LAB</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Отвори меню" aria-expanded="false">☰</button>
+    <nav class="main-nav">
+      <a href="#services">Услуги</a>
+      <a href="#how">Как работи</a>
+      <a href="#faq">FAQ</a>
+      <button class="nav-cta" data-open-order>Поръчай</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">CS2 • FORTNITE • БЪРЗО И ЯСНО</p>
+        <h1>Следващият ти ранг започва от <span class="gradient-text">тук.</span></h1>
+        <p class="hero-text">Избери услуга, изпрати заявка и получи отговор по имейл.</p>
+        <div class="hero-actions">
+          <button class="primary-btn" data-open-order>Поръчай услуга</button>
+          <a class="secondary-btn" href="#services">Виж цените</a>
+        </div>
+      </div>
+      <div class="hero-panel reveal">
+        <div class="status-chip">BOOSTLAB ONLINE</div>
+        <div class="rank-card">
+          <div><span class="muted">Популярна услуга</span><h3>CS2 Premier Rating Boost</h3></div>
+          <div class="price">15€</div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Старт</span><span>Цел</span></div>
+          <div class="progress-track"><span></span></div>
+        </div>
+        <div class="stat-grid">
+          <div><strong>3</strong><span>услуги</span></div>
+          <div><strong>2</strong><span>игри</span></div>
+          <div><strong>24h</strong><span>за отговор</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-heading reveal">
+        <p class="eyebrow">УСЛУГИ</p>
+        <h2>Избери игра и услуга</h2>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <div class="game-badge">CS2</div>
+          <h3>Wingman Boost</h3>
+          <p>Повишаване на Wingman ранга според желаната цел.</p>
+          <div class="service-meta"><span>От</span><strong>10€</strong></div>
+          <button class="card-btn" data-service="CS2 Wingman Boost">Избери</button>
+        </article>
+        <article class="service-card featured reveal">
+          <div class="featured-label">НАЙ-ПОПУЛЯРНО</div>
+          <div class="game-badge">CS2</div>
+          <h3>Premier Rating Boost</h3>
+          <p>Достигане на определен Premier Rating.</p>
+          <div class="service-meta"><span>От</span><strong>15€</strong></div>
+          <button class="card-btn" data-service="CS2 Premier Rating Boost">Избери</button>
+        </article>
+        <article class="service-card reveal">
+          <div class="game-badge">FORTNITE</div>
+          <h3>Ranked Boost</h3>
+          <p>Помощ за достигане на по-висок Fortnite rank.</p>
+          <div class="service-meta"><span>От</span><strong>10€</strong></div>
+          <button class="card-btn" data-service="Fortnite Ranked Boost">Избери</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="section-heading reveal"><p class="eyebrow">ПРОЦЕС</p><h2>Как работи</h2></div>
+      <div class="steps">
+        <div class="step reveal"><span>01</span><div><h3>Избираш услуга</h3><p>Натискаш „Избери“.</p></div></div>
+        <div class="step reveal"><span>02</span><div><h3>Попълваш заявка</h3><p>Добавяш контакт и желана цел.</p></div></div>
+        <div class="step reveal"><span>03</span><div><h3>Получаваш отговор</h3><p>Уточняваме цена и срок.</p></div></div>
+        <div class="step reveal"><span>04</span><div><h3>Започваме</h3><p>След твое потвърждение.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="section-heading reveal"><p class="eyebrow">FAQ</p><h2>Често задавани въпроси</h2></div>
+      <div class="faq-list">
+        <details><summary>Къде ще виждам заявките?</summary><p>В Netlify → Forms → boostlab-order.</p></details>
+        <details><summary>Трябва ли да давам парола?</summary><p>Не. Не изпращай пароли или 2FA кодове.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#home"><span class="brand-mark">B</span><span>BOOST<span class="accent">LAB</span></span></a>
+    <p>© 2026 BoostLab.</p>
+  </footer>
+
+  <div class="modal" id="orderModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-order></div>
+    <div class="modal-card">
+      <button class="modal-close" data-close-order>×</button>
+      <p class="eyebrow">НОВА ЗАЯВКА</p>
+      <h2>Поръчай услуга</h2>
+
+      <form name="boostlab-order" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="boostlab-order">
+        <p class="hidden-field"><label>Не попълвай: <input name="bot-field"></label></p>
+
+        <label>Име<input type="text" name="name" required></label>
+        <label>Имейл<input type="email" name="email" required></label>
+
+        <label>Услуга
+          <select name="service" id="serviceSelect" required>
+            <option value="">Избери услуга</option>
+            <option value="CS2 Wingman Boost">CS2 Wingman Boost — от 10€</option>
+            <option value="CS2 Premier Rating Boost">CS2 Premier Rating Boost — от 15€</option>
+            <option value="Fortnite Ranked Boost">Fortnite Ranked Boost — от 10€</option>
+          </select>
+        </label>
+
+        <div class="form-row">
+          <label><span id="currentLabel">Текущ ранг</span>
+            <input type="text" name="current_value" id="currentInput" required placeholder="Напр. Gold Nova 2">
+          </label>
+          <label><span id="targetLabel">Желан ранг</span>
+            <input type="text" name="target_value" id="targetInput" required placeholder="Напр. Master Guardian">
+          </label>
+        </div>
+
+        <label>Допълнителна информация
+          <textarea name="message" rows="4"></textarea>
+        </label>
+
+        <label class="checkbox-row">
+          <input type="checkbox" required>
+          <span>Разбирам, че това е заявка, а не автоматично потвърдена поръчка.</span>
+        </label>
+
+        <button class="primary-btn submit-btn" type="submit">Изпрати заявката</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
