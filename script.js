@@ -9,11 +9,29 @@ const nav = document.querySelector('.main-nav');
 const menuToggle = document.querySelector('.menu-toggle');
 
 function updateRankFields() {
-  const premier = serviceSelect.value === 'CS2 Premier Rating Boost';
-  currentLabel.textContent = premier ? 'Текущ Premier Rating' : 'Текущ ранг';
-  targetLabel.textContent = premier ? 'Желан Premier Rating' : 'Желан ранг';
-  currentInput.placeholder = premier ? 'Напр. 5 000 точки' : 'Напр. Gold Nova 2';
-  targetInput.placeholder = premier ? 'Напр. 10 000 точки' : 'Напр. Master Guardian';
+    const service = serviceSelect.value;
+
+    if (service === 'CS2 Premier Rating Boost') {
+        currentLabel.textContent = 'Текущ Premier Rating';
+        targetLabel.textContent = 'Желан Premier Rating';
+
+        currentInput.placeholder = 'Напр. 5 000 точки';
+        targetInput.placeholder = 'Напр. 10 000 точки';
+    }
+    else if (service === 'Fortnite Ranked Boost') {
+        currentLabel.textContent = 'Текущ Fortnite ранг';
+        targetLabel.textContent = 'Желан Fortnite ранг';
+
+        currentInput.placeholder = 'Напр. Gold II';
+        targetInput.placeholder = 'Напр. Unreal';
+    }
+    else {
+        currentLabel.textContent = 'Текущ Wingman ранг';
+        targetLabel.textContent = 'Желан Wingman ранг';
+
+        currentInput.placeholder = 'Напр. Gold Nova 2';
+        targetInput.placeholder = 'Напр. Master Guardian';
+    }
 }
 
 function openOrder(service='') {
