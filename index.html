@@ -137,13 +137,52 @@
         </label>
 
         <div class="form-row">
-          <label><span id="currentLabel">Текущ ранг</span>
-            <input type="text" name="current_value" id="currentInput" required placeholder="Напр. Gold Nova 2">
-          </label>
-          <label><span id="targetLabel">Желан ранг</span>
-            <input type="text" name="target_value" id="targetInput" required placeholder="Напр. Master Guardian">
-          </label>
-        </div>
+
+  <label>
+    <span id="currentLabel">Текущ ранг</span>
+
+    <input
+      type="text"
+      name="current_value"
+      id="currentInput"
+      placeholder="Напр. 5 000 точки"
+    >
+
+    <select name="current_rank" id="currentRankSelect" hidden>
+      <option value="">Избери текущ ранг</option>
+    </select>
+  </label>
+
+  <label>
+    <span id="targetLabel">Желан ранг</span>
+
+    <input
+      type="text"
+      name="target_value"
+      id="targetInput"
+      placeholder="Напр. 10 000 точки"
+    >
+
+    <select name="target_rank" id="targetRankSelect" hidden>
+      <option value="">Избери желан ранг</option>
+    </select>
+  </label>
+
+</div>
+
+<div id="fortniteModeField" hidden>
+  <label>Режим</label>
+
+  <label class="checkbox-row">
+    <input type="radio" name="fortnite_mode" value="Build">
+    <span>Build</span>
+  </label>
+
+  <label class="checkbox-row">
+    <input type="radio" name="fortnite_mode" value="Zero Build">
+    <span>Zero Build</span>
+  </label>
+</div>
 
         <label>Допълнителна информация
           <textarea name="message" rows="4"></textarea>
