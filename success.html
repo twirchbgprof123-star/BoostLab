@@ -1,86 +1,28 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BoostLab | Заявката е изпратена</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
-
-body{
-background:#0b0f18;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-color:white;
-}
-
-.card{
-background:#151c2d;
-padding:50px;
-border-radius:20px;
-text-align:center;
-max-width:500px;
-width:90%;
-box-shadow:0 0 40px rgba(0,140,255,.2);
-}
-
-.check{
-font-size:70px;
-margin-bottom:20px;
-color:#00bfff;
-}
-
-h1{
-margin-bottom:15px;
-}
-
-p{
-opacity:.8;
-margin-bottom:30px;
-}
-
-a{
-display:inline-block;
-padding:15px 35px;
-background:#00bfff;
-color:white;
-text-decoration:none;
-border-radius:10px;
-font-weight:bold;
-transition:.3s;
-}
-
-a:hover{
-background:#0099dd;
-}
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070a12">
+  <title>BoostLab | Заявката е изпратена</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Orbitron:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .success-shell{min-height:100vh;display:grid;place-items:center;padding:24px}.success-card{width:min(620px,100%);padding:48px;border:1px solid rgba(255,255,255,.1);border-radius:28px;background:linear-gradient(160deg,rgba(18,29,52,.96),rgba(8,13,25,.98));box-shadow:0 28px 90px rgba(0,0,0,.42);text-align:center}.success-icon{width:76px;height:76px;display:grid;place-items:center;margin:0 auto 24px;border:1px solid rgba(71,165,255,.32);border-radius:22px;background:rgba(47,140,255,.09);color:#78c1ff;font-size:34px}.success-card h1{margin:12px 0 16px;font-size:clamp(36px,7vw,58px);letter-spacing:-3px}.success-card p{max-width:490px;margin:0 auto 26px;color:#94a1b8;line-height:1.75}.success-card .primary-btn{width:auto}@media(max-width:520px){.success-card{padding:32px 22px}.success-card h1{letter-spacing:-2px}}
+  </style>
 </head>
-
 <body>
-
-<div class="card">
-
-<div class="check">✔</div>
-
-<h1>Заявката е изпратена успешно!</h1>
-
-<p>
-Получихме поръчката ти.
-Ще се свържем с теб възможно най-скоро чрез имейла, който си посочил.
-</p>
-
-<a href="/">Обратно към сайта</a>
-
-</div>
-
+  <div class="site-noise"></div><div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <main class="success-shell">
+    <section class="success-card">
+      <div class="success-icon">✓</div>
+      <p class="eyebrow">ЗАЯВКАТА Е ПОЛУЧЕНА</p>
+      <h1>Успешно изпратено.</h1>
+      <p>Ще прегледаме информацията и ще се свържем с теб по имейл. Заявката все още не е автоматично потвърдена или платена.</p>
+      <a class="primary-btn" href="/">Обратно към BoostLab <span>→</span></a>
+    </section>
+  </main>
 </body>
 </html>
