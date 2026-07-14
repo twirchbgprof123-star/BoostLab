@@ -12,20 +12,14 @@ const menuToggle = document.querySelector('.menu-toggle');
 
 const wingmanRanks = [
   'Silver I', 'Silver II', 'Silver III', 'Silver IV',
-  'Silver Elite', 'Silver Elite Master', 'Gold Nova I',
-  'Gold Nova II', 'Gold Nova III', 'Gold Nova Master',
-  'Master Guardian I', 'Master Guardian II', 'Master Guardian Elite',
-  'Distinguished Master Guardian', 'Legendary Eagle',
-  'Legendary Eagle Master', 'Supreme Master First Class', 'Global Elite'
+  'Silver Elite', 'Silver Elite Master', 'Gold Nova I'
 ];
 
 const fortniteRanks = [
   'Bronze I', 'Bronze II', 'Bronze III',
   'Silver I', 'Silver II', 'Silver III',
   'Gold I', 'Gold II', 'Gold III',
-  'Platinum I', 'Platinum II', 'Platinum III',
-  'Diamond I', 'Diamond II', 'Diamond III',
-  'Elite', 'Champion', 'Unreal'
+  'Platinum I', 'Platinum II', 'Platinum III'
 ];
 
 function fillSelect(select, ranks, firstText) {
@@ -60,10 +54,10 @@ function updateRankFields() {
   resetDynamicFields();
 
   if (service === 'CS2 Premier Rating Boost') {
-    currentLabel.textContent = 'Текущ Premier Rating';
-    targetLabel.textContent = 'Желан Premier Rating';
-    currentInput.placeholder = 'Напр. 5 000 точки';
-    targetInput.placeholder = 'Напр. 10 000 точки';
+    currentLabel.textContent = 'Current Premier Rating';
+    targetLabel.textContent = 'Target Premier Rating';
+    currentInput.placeholder = 'e.g. 5,000 points';
+    targetInput.placeholder = 'e.g. 10,000 points';
     currentInput.hidden = false;
     targetInput.hidden = false;
     currentInput.required = true;
@@ -72,10 +66,10 @@ function updateRankFields() {
   }
 
   if (service === 'Fortnite Ranked Boost') {
-    currentLabel.textContent = 'Текущ Fortnite ранг';
-    targetLabel.textContent = 'Желан Fortnite ранг';
-    fillSelect(currentRankSelect, fortniteRanks, 'Избери текущ Fortnite ранг');
-    fillSelect(targetRankSelect, fortniteRanks, 'Избери желан Fortnite ранг');
+    currentLabel.textContent = 'Current Fortnite Rank';
+    targetLabel.textContent = 'Target Fortnite Rank';
+    fillSelect(currentRankSelect, fortniteRanks, 'Select current Fortnite rank');
+    fillSelect(targetRankSelect, fortniteRanks, 'Select target Fortnite rank');
     currentRankSelect.hidden = false;
     targetRankSelect.hidden = false;
     currentRankSelect.required = true;
@@ -87,10 +81,10 @@ function updateRankFields() {
   }
 
   if (service === 'CS2 Wingman Boost') {
-    currentLabel.textContent = 'Текущ Wingman ранг';
-    targetLabel.textContent = 'Желан Wingman ранг';
-    fillSelect(currentRankSelect, wingmanRanks, 'Избери текущ Wingman ранг');
-    fillSelect(targetRankSelect, wingmanRanks, 'Избери желан Wingman ранг');
+    currentLabel.textContent = 'Current Wingman Rank';
+    targetLabel.textContent = 'Target Wingman Rank';
+    fillSelect(currentRankSelect, wingmanRanks, 'Select current Wingman rank');
+    fillSelect(targetRankSelect, wingmanRanks, 'Select target Wingman rank');
     currentRankSelect.hidden = false;
     targetRankSelect.hidden = false;
     currentRankSelect.required = true;
