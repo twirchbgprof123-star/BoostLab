@@ -476,3 +476,90 @@ textarea { resize: vertical; min-height: 105px; }
     transform: none;
   }
 }
+.status-bar {
+  width: min(1180px, calc(100% - 32px));
+  margin: 12px auto 0;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 9px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  background: rgba(8, 13, 25, 0.72);
+  backdrop-filter: blur(16px);
+  color: #9ba8bd;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-open {
+  color: #b9f7d2;
+}
+
+.status-open i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #35d77c;
+  box-shadow: 0 0 14px rgba(53, 215, 124, 0.75);
+  animation: statusPulse 1.8s ease-in-out infinite;
+}
+
+.status-divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.status-discord {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #71baff;
+  font: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.status-discord:hover {
+  color: #a6d6ff;
+  transform: translateY(-1px);
+}
+
+@keyframes statusPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.55;
+    transform: scale(0.78);
+  }
+}
+
+@media (max-width: 700px) {
+  .status-bar {
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    padding: 11px 14px;
+    text-align: center;
+  }
+
+  .status-divider {
+    display: none;
+  }
+}
