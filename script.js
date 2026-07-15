@@ -147,3 +147,20 @@ const revealObserver = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
 updateRankFields();
+const copyDiscordButton = document.getElementById('copyDiscord');
+
+copyDiscordButton?.addEventListener('click', async () => {
+  const username = '.mecmec';
+  const originalText = copyDiscordButton.textContent;
+
+  try {
+    await navigator.clipboard.writeText(username);
+    copyDiscordButton.textContent = 'Discord copied!';
+  } catch {
+    copyDiscordButton.textContent = username;
+  }
+
+  setTimeout(() => {
+    copyDiscordButton.textContent = originalText;
+  }, 1800);
+});
