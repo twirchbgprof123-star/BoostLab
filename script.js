@@ -164,3 +164,56 @@ copyDiscordButton?.addEventListener('click', async () => {
     copyDiscordButton.textContent = originalText;
   }, 1800);
 });
+// Animated service card in the hero section
+const rotatingServiceCard = document.querySelector('.floating-cs');
+
+if (rotatingServiceCard) {
+  const gameLabel = rotatingServiceCard.querySelector('span');
+  const serviceLabel = rotatingServiceCard.querySelector('strong');
+
+  const rotatingServices = [
+    {
+      game: 'CS2',
+      service: 'Wingman',
+      className: 'service-cs2'
+    },
+    {
+      game: 'CS2',
+      service: 'Premier',
+      className: 'service-cs2'
+    },
+    {
+      game: 'FORTNITE',
+      service: 'Ranked',
+      className: 'service-fortnite'
+    }
+  ];
+
+  let currentServiceIndex = 0;
+
+  function changeRotatingService() {
+    rotatingServiceCard.classList.add('service-changing');
+
+    setTimeout(() => {
+      currentServiceIndex =
+        (currentServiceIndex + 1) % rotatingServices.length;
+
+      const nextService = rotatingServices[currentServiceIndex];
+
+      gameLabel.textContent = nextService.game;
+      serviceLabel.textContent = nextService.service;
+
+      rotatingServiceCard.classList.remove(
+        'service-cs2',
+        'service-fortnite'
+      );
+
+      rotatingServiceCard.classList.add(nextService.className);
+      rotatingServiceCard.classList.remove('service-changing');
+    }, 350);
+  }
+
+  rotatingServiceCard.classList.add('service-cs2');
+
+  setInterval(changeRotatingService, 3200);
+}
